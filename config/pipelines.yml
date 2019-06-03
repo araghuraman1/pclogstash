@@ -1,0 +1,14 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+- pipeline.id: f_5500_2017_latest_layout_pipeline
+  path.config: "/usr/share/logstash/pipeline/f_5500_2017_latest_layout.conf"
+  pipeline.workers: 1
+- pipeline.id: f_5500_2017_latest_pipeline
+  path.config: "/usr/share/logstash/pipeline/f_5500_2017_latest.conf"
+  pipeline.workers: 2
+  queue.type: persisted
+  queue.drain: true
+  queue.max_bytes: 100mb
+  path.queue: "/usr/share/logstash/moredata"

@@ -1,0 +1,8 @@
+node:
+  name: personalcapitallogstash
+pipeline:
+  batch:
+    size: 125
+    delay: 50
+log:
+  level: error

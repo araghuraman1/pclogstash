@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  logstash:
+    #image: docker.elastic.co/logstash/logstash:7.1.1
+    image: personalcapitallogstash
+    build:
+      context: .
+    ports:
+     - 5044
+     - 9600
+    volumes:
+     - /home/ubuntu/logstash/config:/usr/share/logstash/config:ro
+     - /home/ubuntu/logstash/pipeline:/usr/share/logstash/pipeline:ro
+     - /home/ubuntu/logstash/moredata:/usr/share/logstash/moredata:rw
