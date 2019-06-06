@@ -3,7 +3,7 @@ version: '3'
 services:
   logstash:
     #image: docker.elastic.co/logstash/logstash:7.1.1
-    image: personalcapitallogstash
+    image: pclogstash
     build:
       context: .
     ports:
