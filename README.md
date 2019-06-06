@@ -1,4 +1,4 @@
-# personalcapitallogstash
+# pclogstash
 
 Steps:
 
